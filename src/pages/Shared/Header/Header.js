@@ -1,13 +1,13 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import logo from '../../../images/logo.png';
 
 const Header = () => {
     return (
         <div>
-            <Navbar fixed='top' expand="lg" className="bg-light">
+            <Navbar fixed='top' expand="lg" style={{ backgroundColor: '#212529' }}>
                 <Container fluid>
                     <img style={{ width: '80px', height: '40px' }} src={logo} alt="" />
                     <Navbar.Brand className="ms-3 text-info">BD Travel Agency</Navbar.Brand>
@@ -28,9 +28,6 @@ const Header = () => {
                         <div>
                             <Nav.Link className="text-info me-2" as={Link} to='/login'>Login</Nav.Link>
                         </div>
-                        <NavLink to="/">
-                            <Button variant="outline-info">Book Now</Button>
-                        </NavLink>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
