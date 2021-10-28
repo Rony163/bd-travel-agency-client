@@ -19,7 +19,7 @@ const Header = () => {
                             navbarScroll
                         >
                             <Nav.Link as={HashLink} className="text-info" to="/home">Home</Nav.Link>
-                            <Nav.Link as={HashLink} className="text-info" to="/home#services">Services</Nav.Link>
+                            <Nav.Link as={HashLink} className="text-info" to="/services">Services</Nav.Link>
                         </Nav>
 
                         <div className='d-flex flex-column flex-lg-row'>
