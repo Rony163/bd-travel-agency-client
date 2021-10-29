@@ -21,15 +21,19 @@ const Header = () => {
                             navbarScroll
                         >
                             <Nav.Link as={HashLink} className="text-info" to="/home">Home</Nav.Link>
-                            <Nav.Link as={HashLink} className="text-info" to="/services">Services</Nav.Link>
                         </Nav>
+                        {!user?.email ?
+                            <div>
+                                <Nav.Link className="text-info me-2" as={Link} to='/login'>Login</Nav.Link>
+                            </div>
+                            :
+                            <div className='d-flex flex-column flex-lg-row'>
+                                <Nav.Link as={HashLink} className="text-info" to="/services">Services</Nav.Link>
+                                <span className="text-danger p-2"><i class="fas fa-user"></i> {user?.displayName}</span>
+                                <button className="btn btn-info" onClick={logOut}>LogOut </button>
+                            </div>
+                        }
 
-                        <div className='d-flex flex-column flex-lg-row'>
-                            <Nav.Link className="text-info me-2" as={Link} to='/login' onClick={logOut}>Logout</Nav.Link>
-                        </div>
-                        <div>
-                            <Nav.Link className="text-info me-2" as={Link} to='/login'>Login</Nav.Link>
-                        </div>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

@@ -6,7 +6,7 @@ const Login = () => {
     const { googleSignIn } = useFirebase();
 
     return (
-        <div className='parent'>
+        <div className='login-container parent'>
             <h1 className="text-info mt-5">Please Log in with Google:</h1>
             <button className='child' onClick={googleSignIn}>
                 <span className='p-2 btn-rounded text-white fw-bold'>
