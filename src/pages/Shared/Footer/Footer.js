@@ -17,18 +17,18 @@ const Footer = () => {
                     <Col xs={12} md={4}>
                         <div className='footer-section'>
                             <h2 className='fw-bold'>Contact us</h2>
-                            <p> <i class="fas fa-map-marker icon-color me-2"></i> 04360, Dhaka, Solimulla road, 12/4</p>
-                            <p><i class="fas fa-phone-alt icon-color me-2"></i> 803-33-5644-99</p>
-                            <p><i class="fas fa-envelope icon-color me-2"></i> admin@bdtravelagency.net</p>
+                            <p> <i className="fas fa-map-marker icon-color me-2"></i> 04360, Dhaka, Solimulla road, 12/4</p>
+                            <p><i className="fas fa-phone-alt icon-color me-2"></i> 803-33-5644-99</p>
+                            <p><i className="fas fa-envelope icon-color me-2"></i> admin@bdtravelagency.net</p>
                         </div>
                     </Col>
                     <Col xs={12} md={4}>
                         <div className='footer-section'>
                             <h2>important Links</h2>
                             <div>
-                                <a className='d-block footer-link' href="/"><i class="fab fa-facebook-square icon-color me-2"></i> Connect with Facebook</a>
-                                <a className='d-block footer-link' href="/"><i class="fab fa-youtube-square icon-color me-2"></i> Connect with YouTube</a>
-                                <a className='d-block footer-link' href="/"><i class="fab fa-instagram icon-color me-2"></i> Connect with Instagram</a>
+                                <a className='d-block footer-link' href="/"><i className="fab fa-facebook-square icon-color me-2"></i> Connect with Facebook</a>
+                                <a className='d-block footer-link' href="/"><i className="fab fa-youtube-square icon-color me-2"></i> Connect with YouTube</a>
+                                <a className='d-block footer-link' href="/"><i className="fab fa-instagram icon-color me-2"></i> Connect with Instagram</a>
                             </div>
                         </div>
                     </Col>

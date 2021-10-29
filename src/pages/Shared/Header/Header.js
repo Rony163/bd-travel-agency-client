@@ -31,7 +31,7 @@ const Header = () => {
                                 <Nav.Link as={HashLink} className="text-info" to="/">My Event</Nav.Link>
                                 <Nav.Link as={HashLink} className="text-info" to="/">All Event</Nav.Link>
                                 <Nav.Link as={HashLink} className="text-info" to="/">Add Services</Nav.Link>
-                                <span className="text-danger p-2"><i class="fas fa-user"></i> {user?.displayName}</span>
+                                <span className="text-danger p-2"><i className="fas fa-user"></i> {user?.displayName}</span>
                                 <button className="btn btn-info" onClick={logOut}>LogOut </button>
                             </div>
                         }
