@@ -1,0 +1,15 @@
+.parent {
+    background: lightyellow;
+    position: relative;
+    height: 300px;
+    margin-top: 80px;
+}
+.child {
+    background: #622CED;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-evenly;
+}

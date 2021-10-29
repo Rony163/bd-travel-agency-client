@@ -2,9 +2,11 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import useFirebase from '../../../hooks/useFirebase';
 import logo from '../../../images/logo.png';
 
 const Header = () => {
+    const { user, logOut } = useFirebase();
     return (
         <div>
             <Navbar fixed='top' expand="lg" style={{ backgroundColor: '#212529' }}>
@@ -23,7 +25,7 @@ const Header = () => {
                         </Nav>
 
                         <div className='d-flex flex-column flex-lg-row'>
-                            <Nav.Link className="text-info me-2" as={Link} to='/login'>Logout</Nav.Link>
+                            <Nav.Link className="text-info me-2" as={Link} to='/login' onClick={logOut}>Logout</Nav.Link>
                         </div>
                         <div>
                             <Nav.Link className="text-info me-2" as={Link} to='/login'>Login</Nav.Link>
