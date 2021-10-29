@@ -1,19 +1,20 @@
 import React from 'react';
 import useFirebase from '../../hooks/useFirebase';
-import './Login.css';
+import logo from '../../images/logo.png';
+// import './Login.css';
 
 const Login = () => {
     const { googleSignIn } = useFirebase();
 
     return (
-        <div className='login-container parent'>
-            <h1 className="text-info mt-5">Please Log in with Google:</h1>
-            <button className='child' onClick={googleSignIn}>
-                <span className='p-2 btn-rounded text-white fw-bold'>
-                    <i class="fab fa-google me-3 text-warning"></i>
-                    Google Sign in
-                </span>
-            </button>
+        <div>
+            <div className='mt-5 pt-5'>
+                <img className='img-fluid' style={{ width: '350px' }} src={logo} alt="" />
+            </div>
+            <div className='d-flex flex-column justify-content-center align-items-center '>
+                <h1 className='mb-3 text-info' >Please login Here</h1>
+                <button onClick={googleSignIn} className='bg-primary text-white fs-5 rounded'><i class="fab fa-google me-3 text-warning"></i>Login with Google</button>
+            </div>
         </div>
     );
 };
