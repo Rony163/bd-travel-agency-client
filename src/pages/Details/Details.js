@@ -60,12 +60,19 @@ const Details = () => {
                     <div>
                         <h1>Booking Here</h1>
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <input className='input-place' {...register("name", { required: true, maxLength: 20 })} placeholder='Name' value={user?.displayName || ''} />
-                            <input className='input-place' {...register("email")} placeholder='Email' value={user?.email || ''} />
-                            <input className='input-place' defaultValue="" type="number" {...register("totalPerson")} placeholder='Total Person' />
-                            <input className='input-place' defaultValue="" type="number" {...register("phoneNumber")} placeholder='Phone No' />
-                            <input className='input-place' defaultValue="" type="number" {...register("duration")} placeholder='Weekend Days' />
-                            <input className='input-place btn-submit' type="submit" />
+                            <input className="input-field"{...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
+
+                            <input className="input-field"{...register("email", { required: true, maxLength: 30 })} placeholder="Email" />
+
+                            <input className="input-field"{...register("date", { required: true, maxLength: 20 })} placeholder="Date" />
+
+                            <input className="input-field"{...register("mobile", { required: true, maxLength: 20 })} placeholder="Phone" />
+
+                            <input className="input-field"{...register("person", { required: true, maxLength: 20 })} placeholder="Person" />
+
+                            <input className="input-field"{...register("ServiceName")} placeholder="Service name" value={service.name || ''} />
+
+                            <input className='input-field btn-submit' type="submit" value="Submit" />
                         </form>
 
                     </div>

@@ -8,12 +8,11 @@
     font-size: 20px;
     font-weight: bold;
 }
-.input-place{
+.input-field{
     display: block;
     margin: auto;
     margin-top: 10px;
-   padding: 5px 30px;
-
+    padding: 5px 30px;
 }
 .btn-submit{
     padding: 10px 50px;
