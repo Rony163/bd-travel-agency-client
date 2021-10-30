@@ -39,16 +39,22 @@ const MyEvents = () => {
     }
 
     return (
-        <Row xs={1} md={3} className="g-4 m-2 mt-5">
-            {
-                matchEvent.map(event => <MyEvent
-                    key={event._id}
-                    event={event}
-                    handleDelete={handleDelete}
-                >
-                </MyEvent>)
+        <div>
+            {matchEvent.length ?
+                <Row xs={1} md={3} className="g-4 m-2 mt-5">
+                    {
+                        matchEvent.map(event => <MyEvent
+                            key={event._id}
+                            event={event}
+                            handleDelete={handleDelete}
+                        >
+                        </MyEvent>)
+                    }
+                </Row >
+                :
+                <h5 className="text-danger text-center mt-5 pt-5">There is nothing to show, please add a event first</h5>
             }
-        </Row >
+        </div>
     );
 };
 

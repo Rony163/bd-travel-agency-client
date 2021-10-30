@@ -29,15 +29,21 @@ const AllEvents = () => {
     }
 
     return (
-        <Row xs={1} md={3} className="g-4 m-2 mt-5">
-            {
-                events.map(event => <Events
-                    key={event._id}
-                    event={event}
-                    handleDelete={handleDelete}
-                ></Events>)
+        <div>
+            {events.length ?
+                <Row xs={1} md={3} className="g-4 m-2 mt-5">
+                    {
+                        events.map(event => <Events
+                            key={event._id}
+                            event={event}
+                            handleDelete={handleDelete}
+                        ></Events>)
+                    }
+                </Row >
+                :
+                <h5 className="text-danger text-center mt-5 pt-5">There is nothing to show, please add a event first</h5>
             }
-        </Row >
+        </div>
     );
 };
 
