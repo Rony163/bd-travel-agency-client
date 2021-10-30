@@ -12,7 +12,7 @@ const Header = () => {
             <Navbar fixed='top' expand="lg" style={{ backgroundColor: '#212529' }}>
                 <Container fluid>
                     <img style={{ width: '80px', height: '40px' }} src={logo} alt="" />
-                    <Navbar.Brand className="ms-3 text-info">BD Travel Agency</Navbar.Brand>
+                    <Navbar.Brand className="ms-3 text-info" as={HashLink} to='/home'>BD Travel Agency</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav

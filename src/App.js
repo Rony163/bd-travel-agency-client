@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
+import AllEvents from './pages/AllEvents/AllEvents';
 import Details from './pages/Details/Details';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login';
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/details/:id">
             <Details></Details>
+          </Route>
+          <Route path="/allEvent">
+            <AllEvents></AllEvents>
           </Route>
           <Route path="/login">
             <Login></Login>
