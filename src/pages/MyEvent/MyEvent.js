@@ -1,8 +1,7 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
-import './Events.css';
 
-const Events = (props) => {
+const MyEvent = (props) => {
     const { name, email, mobile, person, ServiceName, status } = props.event;
     return (
         <div>
@@ -23,4 +22,4 @@ const Events = (props) => {
     );
 };
 
-export default Events;
+export default MyEvent;

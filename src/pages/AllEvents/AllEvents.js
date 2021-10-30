@@ -9,6 +9,7 @@ const AllEvents = () => {
             .then(res => res.json())
             .then(data => setEvents(data))
     }, [])
+
     return (
         <Row xs={1} md={3} className="g-4 m-2 mt-5">
             {
@@ -17,7 +18,7 @@ const AllEvents = () => {
                     event={event}
                 ></Events>)
             }
-        </Row>
+        </Row >
     );
 };
 
