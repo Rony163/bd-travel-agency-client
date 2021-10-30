@@ -84,26 +84,8 @@ const Details = () => {
                             <input className="input-field" onChange={handlePersonChange} type="number" placeholder='Total Person' />
                             <input className="input-field" onChange={handlePhoneNumberChange} type="number" placeholder='Phone Number' />
                             <input className="input-field" onChange={handleDateOfTravel} type="number" placeholder='Date of Travel' />
-                            <input className="input-field" type="submit" value="Register" />
+                            <input className="input-field btn-submit" type="submit" value="Register" />
                         </form>
-
-
-                        {/* <form onSubmit={handleSubmit(onSubmit)}>
-                            <input className="input-field"{...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
-
-                            <input className="input-field"{...register("email", { required: true, maxLength: 30 })} placeholder="Email" />
-
-                            <input className="input-field"{...register("date", { required: true, maxLength: 20 })} placeholder="Date" />
-
-                            <input className="input-field"{...register("mobile", { required: true, maxLength: 20 })} placeholder="Phone" />
-
-                            <input className="input-field"{...register("person", { required: true, maxLength: 20 })} placeholder="Person" />
-
-                            <input className="input-field"{...register("ServiceName")} placeholder="Service name" value={service.name || ''} />
-
-                            <input className='input-field btn-submit' type="submit" value="Submit" />
-                        </form> */}
-
                     </div>
                 </Col>
             </Row>
