@@ -3,7 +3,7 @@ import { Card, Col } from 'react-bootstrap';
 import './Events.css';
 
 const Events = (props) => {
-    const { name, email, mobile, person, ServiceName, status } = props.event;
+    const { _id, name, email, mobile, person, ServiceName, status } = props.event;
     return (
         <div>
             <Col className="shadow">
@@ -16,7 +16,7 @@ const Events = (props) => {
                         <Card.Title>Status: {status}</Card.Title>
                         <Card.Title>Place Name: {ServiceName}</Card.Title>
                     </Card.Body>
-                    <button className="btn btn-danger">Delete</button>
+                    <button className="btn btn-danger" onClick={() => props.handleDelete(_id)}>Delete</button>
                 </Card>
             </Col>
         </div>
