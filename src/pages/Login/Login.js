@@ -2,7 +2,6 @@ import React from 'react';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import logo from '../../images/logo.png';
-// import './Login.css';
 
 const Login = () => {
     const { googleSignIn } = useAuth();
