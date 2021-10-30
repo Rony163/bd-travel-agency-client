@@ -3,7 +3,7 @@ import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Service = (props) => {
-    const { id, name, img, description } = props.service;
+    const { _id, name, img, description } = props.service;
     return (
         <div>
             <div>
@@ -14,7 +14,7 @@ const Service = (props) => {
                         <Card.Text> {description}</Card.Text>
                     </Card.Body>
                     <div className="d-flex justify-content-center">
-                        <Link to={`details/${id}`}>
+                        <Link to={`details/${_id}`}>
                             <Button className="mb-2" variant="outline-info">Book Now</Button>
                         </Link>
                     </div>
