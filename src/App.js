@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
+import AddService from './pages/AddService/AddService';
 import AllEvents from './pages/AllEvents/AllEvents';
 import Details from './pages/Details/Details';
 import Home from './pages/Home/Home/Home';
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path="/allEvent">
             <AllEvents></AllEvents>
+          </Route>
+          <Route path="/addService">
+            <AddService></AddService>
           </Route>
           <Route path="/login">
             <Login></Login>
