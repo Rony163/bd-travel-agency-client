@@ -8,6 +8,7 @@ import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login';
 import MyEvents from './pages/MyEvents/MyEvents';
 import NotFound from './pages/NotFound/NotFound';
+import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import Footer from './pages/Shared/Footer/Footer';
 import Header from './pages/Shared/Header/Header';
 
@@ -24,18 +25,18 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/details/:id">
+            <PrivateRoute path="/details/:id">
               <Details></Details>
-            </Route>
-            <Route path="/myEvents">
+            </PrivateRoute>
+            <PrivateRoute path="/myEvents">
               <MyEvents></MyEvents>
-            </Route>
-            <Route path="/allEvent">
+            </PrivateRoute>
+            <PrivateRoute path="/allEvent">
               <AllEvents></AllEvents>
-            </Route>
-            <Route path="/addService">
+            </PrivateRoute>
+            <PrivateRoute path="/addService">
               <AddService></AddService>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
