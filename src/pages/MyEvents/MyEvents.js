@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
-import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
 import MyEvent from '../MyEvent/MyEvent';
 
 const MyEvents = () => {
-    const { user } = useFirebase();
+    const { user } = useAuth();
     const [events, setEvents] = useState([]);
     const [matchEvent, setMatchEvent] = useState([]);
 

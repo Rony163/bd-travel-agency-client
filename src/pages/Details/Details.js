@@ -3,12 +3,12 @@ import { useState, useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
-import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
 import './Details.css';
 
 const Details = () => {
     const { id } = useParams();
-    const { user } = useFirebase();
+    const { user } = useAuth();
     const [service, setService] = useState({});
 
     // load data from database
