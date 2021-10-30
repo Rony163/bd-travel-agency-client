@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Row } from 'react-bootstrap';
+import { Row, Spinner } from 'react-bootstrap';
 import Events from '../Events/Events';
 
 const AllEvents = () => {
@@ -31,15 +31,17 @@ const AllEvents = () => {
     return (
         <div>
             {events.length ?
-                <Row xs={1} md={3} className="g-4 m-2 mt-5">
-                    {
-                        events.map(event => <Events
-                            key={event._id}
-                            event={event}
-                            handleDelete={handleDelete}
-                        ></Events>)
-                    }
-                </Row >
+                <div>
+                    <Row xs={1} md={3} className="g-4 m-2 mt-5">
+                        {
+                            events.map(event => <Events
+                                key={event._id}
+                                event={event}
+                                handleDelete={handleDelete}
+                            ></Events>)
+                        }
+                    </Row >
+                </div>
                 :
                 <h5 className="text-danger text-center mt-5 pt-5">There is nothing to show, please add a event first</h5>
             }

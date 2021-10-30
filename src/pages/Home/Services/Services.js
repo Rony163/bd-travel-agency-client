@@ -16,7 +16,7 @@ const Services = () => {
         <div className="mt-3">
             {
                 services.length === 0 ?
-                    <Spinner className='d-block mx-auto my-4' animation="border" variant="danger" />
+                    <Spinner className='d-block mx-auto my-4' animation="border" variant="info" />
                     :
                     <div>
                         <h1 className="text-info">Our Travel Places</h1>

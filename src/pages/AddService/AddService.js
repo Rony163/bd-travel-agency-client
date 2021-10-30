@@ -17,7 +17,7 @@ const AddService = () => {
     };
     return (
         <div className="add-service mt-5">
-            <h2 className="text-info">Add a tourist place</h2>
+            <h2 className="text-info pt-5">Add a tourist place</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("name", { required: true, maxLength: 20 })} placeholder="Place Name" />
                 <textarea {...register("description")} placeholder="Description" />
