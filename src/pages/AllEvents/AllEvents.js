@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { Row, Spinner } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import Events from '../Events/Events';
 
 const AllEvents = () => {
     const [events, setEvents] = useState([]);
+    const [status, setStatus] = useState(true);
+
     useEffect(() => {
         fetch('http://localhost:5000/events')
             .then(res => res.json())
             .then(data => setEvents(data))
-    }, [])
+    }, [status, events])
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, You want a delete?');
@@ -28,6 +30,26 @@ const AllEvents = () => {
         }
     }
 
+    const handleSuccess = id => {
+        setStatus(!status);
+        const url = `http://localhost:5000/events/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    alert('Status Update succesfully.')
+                }
+                else {
+                    alert('Already Approved')
+                }
+            })
+    }
+
     return (
         <div>
             {events.length ?
@@ -39,6 +61,7 @@ const AllEvents = () => {
                                 key={event._id}
                                 event={event}
                                 handleDelete={handleDelete}
+                                handleSuccess={handleSuccess}
                             ></Events>)
                         }
                     </Row >

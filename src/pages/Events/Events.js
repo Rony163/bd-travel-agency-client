@@ -16,6 +16,7 @@ const Events = (props) => {
                         <p>Total Person: {person}</p>
                         <p>Journy Date: {date}</p>
                         <p>Status: {status}</p>
+                        <button onClick={() => props.handleSuccess(_id)}>Approved</button>
                     </Card.Body>
                     <button className="btn btn-danger" onClick={() => props.handleDelete(_id)}>Delete</button>
                 </Card>

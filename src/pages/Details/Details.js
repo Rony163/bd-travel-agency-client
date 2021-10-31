@@ -81,9 +81,9 @@ const Details = () => {
                         <form onSubmit={handleSubmit}>
                             <input className="input-field" ref={refUserName} type="text" placeholder="Name" value={user.displayName || ''} />
                             <input className="input-field" ref={refEmail} type="email" placeholder='Email' value={user.email || ''} />
-                            <input className="input-field" onChange={handlePersonChange} type="number" placeholder='Total Person' />
-                            <input className="input-field" onChange={handlePhoneNumberChange} type="number" placeholder='Phone Number' />
-                            <input className="input-field" onChange={handleDateOfTravel} type="number" placeholder='Date of Travel' />
+                            <input className="input-field" onChange={handlePersonChange} type="number" placeholder='Total Person' required />
+                            <input className="input-field" onChange={handlePhoneNumberChange} type="number" placeholder='Phone Number' required />
+                            <input className="input-field" onChange={handleDateOfTravel} type="number" placeholder='Date of Travel' required />
                             <input className="input-field btn-submit" type="submit" value="Register" />
                         </form>
                     </div>
