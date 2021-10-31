@@ -1,6 +1,6 @@
 # BD Travel Agency
 
-Live site link of [bd travel agency](https://bd-travel-agency.firebaseapp.com/).
+Live site link of [bd-travel-agency](https://bd-travel-agency.firebaseapp.com/).
 
 ## Description
 
