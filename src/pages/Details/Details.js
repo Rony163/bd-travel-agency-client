@@ -15,7 +15,7 @@ const Details = () => {
 
     // load data from database
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://enigmatic-refuge-81608.herokuapp.com/services/${id}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [id])
@@ -46,7 +46,7 @@ const Details = () => {
         singleService.status = 'pending';
         console.log(singleService);
 
-        fetch('http://localhost:5000/events', {
+        fetch('https://enigmatic-refuge-81608.herokuapp.com/events', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

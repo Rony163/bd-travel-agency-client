@@ -10,7 +10,7 @@ const MyEvents = () => {
 
     // This is for load the data
     useEffect(() => {
-        fetch('http://localhost:5000/events')
+        fetch('https://enigmatic-refuge-81608.herokuapp.com/events')
             .then(res => res.json())
             .then(data => setEvents(data))
     }, [])
@@ -23,7 +23,7 @@ const MyEvents = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, You want cancle?');
         if (proceed) {
-            const url = `http://localhost:5000/events/${id}`;
+            const url = `https://enigmatic-refuge-81608.herokuapp.com/events/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -7,7 +7,7 @@ const AllEvents = () => {
     const [status, setStatus] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/events')
+        fetch('https://enigmatic-refuge-81608.herokuapp.com/events')
             .then(res => res.json())
             .then(data => setEvents(data))
     }, [status, events])
@@ -15,7 +15,7 @@ const AllEvents = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, You want a delete?');
         if (proceed) {
-            const url = `http://localhost:5000/events/${id}`;
+            const url = `https://enigmatic-refuge-81608.herokuapp.com/events/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -32,7 +32,7 @@ const AllEvents = () => {
 
     const handleSuccess = id => {
         setStatus(!status);
-        const url = `http://localhost:5000/events/${id}`;
+        const url = `https://enigmatic-refuge-81608.herokuapp.com/events/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
