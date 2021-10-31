@@ -28,9 +28,9 @@ const Header = () => {
                             </div>
                             :
                             <div className='d-flex flex-column flex-lg-row'>
-                                <Nav.Link as={HashLink} className="text-info" to="/myEvents">My Event</Nav.Link>
-                                <Nav.Link as={HashLink} className="text-info" to="/allEvent">Manage Event</Nav.Link>
-                                <Nav.Link as={HashLink} className="text-info" to="/addService">Add a Services</Nav.Link>
+                                <Nav.Link as={HashLink} className="text-info" to="/myEvents">My Events</Nav.Link>
+                                <Nav.Link as={HashLink} className="text-info" to="/allEvent">Manage Events</Nav.Link>
+                                <Nav.Link as={HashLink} className="text-info" to="/addService">Add A New Event</Nav.Link>
                                 <span className="text-danger p-2"><i className="fas fa-user"></i> {user?.displayName}</span>
                                 <button className="btn btn-info" onClick={logOut}>LogOut </button>
                             </div>

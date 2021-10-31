@@ -21,7 +21,7 @@ const MyEvents = () => {
     }, [events, user])
 
     const handleDelete = id => {
-        const proceed = window.confirm('Are you sure, You want a delete?');
+        const proceed = window.confirm('Are you sure, You want cancle?');
         if (proceed) {
             const url = `http://localhost:5000/events/${id}`;
             fetch(url, {
@@ -41,16 +41,19 @@ const MyEvents = () => {
     return (
         <div>
             {matchEvent.length ?
-                <Row xs={1} md={3} className="g-4 m-2 mt-5">
-                    {
-                        matchEvent.map(event => <MyEvent
-                            key={event._id}
-                            event={event}
-                            handleDelete={handleDelete}
-                        >
-                        </MyEvent>)
-                    }
-                </Row >
+                <div className="mt-5 pt-2">
+                    <h1 className="text-info">Your Events List</h1>
+                    <Row xs={1} md={3} className="g-4 m-2">
+                        {
+                            matchEvent.map(event => <MyEvent
+                                key={event._id}
+                                event={event}
+                                handleDelete={handleDelete}
+                            >
+                            </MyEvent>)
+                        }
+                    </Row >
+                </div>
                 :
                 <h5 className="text-danger text-center mt-5 pt-5">There is nothing to show, please add a event first</h5>
             }

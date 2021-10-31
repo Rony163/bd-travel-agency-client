@@ -31,8 +31,9 @@ const AllEvents = () => {
     return (
         <div>
             {events.length ?
-                <div>
-                    <Row xs={1} md={3} className="g-4 m-2 mt-5">
+                <div className="mt-5">
+                    <h1 className="text-info pt-2">All Events List</h1>
+                    <Row xs={1} md={3} className="g-4 m-2">
                         {
                             events.map(event => <Events
                                 key={event._id}
