@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from "react-bootstrap";
 import logo2 from '../../../images/logo.png';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -26,9 +27,9 @@ const Footer = () => {
                         <div className='footer-section'>
                             <h2>important Links</h2>
                             <div>
-                                <a className='d-block footer-link' href="/"><i className="fab fa-facebook-square icon-color me-2"></i> Connect with Facebook</a>
-                                <a className='d-block footer-link' href="/"><i className="fab fa-youtube-square icon-color me-2"></i> Connect with YouTube</a>
-                                <a className='d-block footer-link' href="/"><i className="fab fa-instagram icon-color me-2"></i> Connect with Instagram</a>
+                                <Link className='d-block footer-link' to="/"><i className="fab fa-facebook-square icon-color me-2"></i> Connect with Facebook</Link>
+                                <Link className='d-block footer-link' to="/"><i className="fab fa-youtube-square icon-color me-2"></i> Connect with YouTube</Link>
+                                <Link className='d-block footer-link' to="/"><i className="fab fa-instagram icon-color me-2"></i> Connect with Instagram</Link>
                             </div>
                         </div>
                     </Col>
